@@ -2,7 +2,7 @@
 
 ## Quick Summary
 
-This repository holds the source code that supports a post made on my personal page. 
+This folder holds the source code that supports the Go Example
 
 Please visit XXX for more information on this post.
 
@@ -10,17 +10,15 @@ Please visit XXX for more information on this post.
 
 * Node - 8.4.0
 * npm - 5.4.2
-* Go - 1.9
 * curl - 7.54.0
 
 ## Setting up everything
 
 ### Setup assumptions
 
-You already have Node and Go installed (see above the versions I've used).
+You already have Node installed (see above the versions I've used).
 
 * [Node download/installation guide](https://nodejs.org/en/download/package-manager/)
-* [Go download/installation guide](https://golang.org/doc/install)
 
 ### Download the project
 
@@ -90,13 +88,6 @@ cd NodeExample
 node .
 ```
 
-### Running the go server example
-
-```bash
-cd GoExample
-go run main.go
-```
-
 ## Executing examples
 
 ### NodeJS non blocking example
@@ -122,15 +113,3 @@ concurrently -r "curl http://localhost:3000/blocking-eventloop" "curl http://loc
 #### Expected result
 
 The first message should appear after 5 seconds and the second message should appear 5 seconds after the first (because the first one took over the main thread).
-
-### Go example
-
-Open a terminal window and run
-
-```bash
-concurrently -r "curl http://localhost:8080/" "curl http://localhost:8080/" "curl http://localhost:8080/" "curl http://localhost:8080/" "curl http://localhost:8080/"
-```
-
-#### Expected result
-
-All messages will appear randomly (because they have a random timer between 1 and 5 seconds) before the first 5 seconds. (Just like the non-blocking example using timeout).

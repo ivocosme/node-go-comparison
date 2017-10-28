@@ -2,7 +2,7 @@
 
 ## Quick Summary
 
-This repository holds the source code that supports a post made on my personal page. 
+This folder holds the source code that supports the Go Example
 
 Please visit XXX for more information on this post.
 
@@ -17,9 +17,8 @@ Please visit XXX for more information on this post.
 
 ### Setup assumptions
 
-You already have Node and Go installed (see above the versions I've used).
+You already have Go installed (see above the versions I've used).
 
-* [Node download/installation guide](https://nodejs.org/en/download/package-manager/)
 * [Go download/installation guide](https://golang.org/doc/install)
 
 ### Download the project
@@ -68,27 +67,9 @@ Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s
 Features: AsynchDNS IPv6 Largefile GSS-API Kerberos SPNEGO NTLM NTLM_WB SSL libz UnixSockets
 ```
 
-### Setting up the node example
-
-Node application will require a small setup, since no dependencies were included in the repository. We'll have to download and install those dependencies (automatically) using npm.
-
-So, on the root of our cloned folder, open a terminal window and run the following commands
-
-```bash
-cd NodeExample
-npm install
-```
-
 You're now good to go!
 
 ## Up and Running
-
-### Running the node server example
-
-```bash
-cd NodeExample
-node .
-```
 
 ### Running the go server example
 
@@ -98,30 +79,6 @@ go run main.go
 ```
 
 ## Executing examples
-
-### NodeJS non blocking example
-
-Open a terminal window and run
-
-```bash
-concurrently -r "curl http://localhost:3000/non-blocking-eventloop" "curl http://localhost:3000/non-blocking-eventloop"
-```
-
-#### Expected result
-
-Both messages should appear after 5 seconds (because both run async in paralel).
-
-### NodeJS blocking example
-
-Open a terminal window and run
-
-```bash
-concurrently -r "curl http://localhost:3000/blocking-eventloop" "curl http://localhost:3000/blocking-eventloop"
-```
-
-#### Expected result
-
-The first message should appear after 5 seconds and the second message should appear 5 seconds after the first (because the first one took over the main thread).
 
 ### Go example
 
