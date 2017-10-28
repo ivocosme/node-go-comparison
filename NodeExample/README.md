@@ -4,7 +4,7 @@
 
 This folder holds the source code that supports the Go Example
 
-Please visit XXX for more information on this post.
+Please visit https://ivocosme.github.io/node-go-concurrency/ for more information on this post.
 
 ## Requirements
 

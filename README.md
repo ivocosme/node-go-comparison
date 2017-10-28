@@ -4,7 +4,7 @@
 
 This repository holds the source code that supports a post made on my personal page. 
 
-Please visit XXX for more information on this post.
+Please visit https://ivocosme.github.io/node-go-concurrency/ for more information on this post.
 
 ## Requirements
 
